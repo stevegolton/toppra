@@ -94,6 +94,7 @@ install(FILES
   DESTINATION include/toppra/constraint/joint_torque)
 install(FILES
   toppra/constraint/cartesian_velocity_norm/pinocchio.hpp
+  toppra/constraint/cartesian_velocity_norm/kdl.hpp
   DESTINATION include/toppra/constraint/cartesian_velocity_norm)
 install(FILES
   toppra/solver/qpOASES-wrapper.hpp
