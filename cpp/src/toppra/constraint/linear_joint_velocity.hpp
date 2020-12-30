@@ -53,7 +53,7 @@ class LinearJointVelocity : public LinearConstraint {
       , m_upper (nDof)
       , m_maxsd (1e8)
     {
-      check();
+      // check();
     }
 
     /**
