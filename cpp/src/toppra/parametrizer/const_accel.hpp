@@ -16,6 +16,9 @@ class ConstAccel : public Parametrizer {
  public:
   ConstAccel(GeometricPathPtr path, const Vector &gridpoints, const Vector &vsquared);
 
+  // Vector of time instances (corresponded to gridpoints)
+  Vector m_ts;
+
  private:
   /** Return joint derivatives at specified times. */
   Vectors eval_impl(const Vector &times, int order = 0) const override;
@@ -37,8 +40,6 @@ class ConstAccel : public Parametrizer {
   bool evalParams(const Vector &ts, Vector &ss, Vector &vs, Vector &us) const;
   // Compute times and acclerations from given data (path, velocities)
   void process_internals();
-  // Vector of time instances (corresponded to gridpoints)
-  Vector m_ts;
   // Vector of accelerations (corresponded to gridpoints). Should have size
   // shorter than m_ts and m_vs by 1.
   Vector m_us;
