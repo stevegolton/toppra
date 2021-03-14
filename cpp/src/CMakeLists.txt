@@ -79,9 +79,12 @@ install(FILES
   DESTINATION include/toppra/algorithm)
 install(FILES
   toppra/constraint/linear_joint_velocity.hpp
+  toppra/constraint/linear_joint_velocity_varying.hpp
   toppra/constraint/linear_joint_acceleration.hpp
+  toppra/constraint/linear_joint_acceleration_varying.hpp
   toppra/constraint/joint_torque.hpp
   toppra/constraint/cartesian_velocity_norm.hpp
+  toppra/constraint/cartesian_velocity_norm_varying.hpp
   DESTINATION include/toppra/constraint)
 install(FILES
   toppra/geometric_path/piecewise_poly_path.hpp
@@ -95,6 +98,7 @@ install(FILES
 install(FILES
   toppra/constraint/cartesian_velocity_norm/pinocchio.hpp
   toppra/constraint/cartesian_velocity_norm/kdl.hpp
+  toppra/constraint/cartesian_velocity_norm/kdl_varying.hpp
   DESTINATION include/toppra/constraint/cartesian_velocity_norm)
 install(FILES
   toppra/solver/qpOASES-wrapper.hpp

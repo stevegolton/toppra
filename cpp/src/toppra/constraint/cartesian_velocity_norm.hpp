@@ -51,12 +51,12 @@ class CartesianVelocityNorm : public LinearConstraint {
     /// Constructor for varying velocity limit.
     /// \note Attributes \ref m_S and \ref m_limit **must** be computed in
     /// \ref computeVelocityLimit
-    CartesianVelocityNorm ()
+    CartesianVelocityNorm (const Matrix& S)
       : LinearConstraint (1, 1, false, false, false)
       , m_limit (1.)
-      , m_S (6,6)
+      , m_S (S)
     {
-      check();
+      // check();
     }
 
     /// Pure abstract method to compute the velocity from
